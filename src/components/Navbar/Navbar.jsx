@@ -10,13 +10,17 @@ import {
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="logo">
-        <h1>Forkit</h1>
+      <div className="navbar__container">
+        <div className="logo">
+          <h1>Forkit</h1>
+        </div>
+        <div className="navbar__btns">
+          <p>Search</p>
+          {/* <Search /> */}
+          {/* Will link to Login page */}
+          <Link to={'#'}>Login</Link>
+        </div>
       </div>
-      <p>Search</p>
-      {/* <Search /> */}
-      {/* Will link to Login page */}
-      <Link to={'#'}>Login</Link>
     </div>
   )
 };

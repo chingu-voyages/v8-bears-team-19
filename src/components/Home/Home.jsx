@@ -6,8 +6,10 @@ const Home = props => {
 
   return (
     <div className="home">
-      <Navbar />
-      <Feed />
+      <div className="home__container">
+        <Navbar />
+        <Feed />      
+      </div>
     </div>
   );
 };
