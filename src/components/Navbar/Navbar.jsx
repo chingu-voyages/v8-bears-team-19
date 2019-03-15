@@ -1,6 +1,7 @@
 import React from 'react';
 // import Search from '../Search/Search';
 // import Login from '../Login/Login';
+import search from './search.svg'
 
 import { 
   BrowserRouter as Router, Link
@@ -15,7 +16,8 @@ const Navbar = () => {
           <h1>Forkit</h1>
         </div>
         <div className="navbar__btns">
-          <p>Search</p>
+          <Link to={'#'}>Search</Link>
+          <Link to={'#'}>Register</Link>
           {/* <Search /> */}
           {/* Will link to Login page */}
           <Link to={'#'}>Login</Link>
