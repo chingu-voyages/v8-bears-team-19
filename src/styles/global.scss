@@ -1,0 +1,47 @@
+// global.scss - define our global scss variables here.
+
+// if file grows too big, we can seperate (colors.scss, variables.scss, etc..)
+
+
+// Colors
+
+// Those are just for reference, we will decide on our color scheme later
+$main-background: #FFF;
+$primary-color: #381D2a;
+$white: #EDF2F4;
+$black: #19141c;
+
+$error: hsl(20, 67, 40);
+$cta: rgb(155, 197, 214);
+
+
+// FONTS 
+
+
+
+// Resets 
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // 10px possible for *rem* units usage. matter of choice.
+  // font-size: 10px;
+}
+
+body {
+  background: $main-background;
+}
+
+// can define general button style, general h1,h2,etc.. UNLESS we make a default Button component and define the styles there. 
+// also styling the headings (h1,h2,h3) is useful for Responsive Design
+
+// example:
+button {
+  padding: 6px 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}

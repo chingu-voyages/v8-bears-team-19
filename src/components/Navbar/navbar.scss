@@ -1,0 +1,27 @@
+.navbar {
+  height: 80px;
+  background: $primary-color;
+  color: $white;
+  .navbar__container {
+    display: flex;
+    max-width: 1024px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar__btns {
+    padding: 1.5em 1em;
+    & > * {
+      font-size: 20px;
+      padding: 0 1em;
+      color: #9c903f;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
