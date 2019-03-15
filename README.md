@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Starting the Express backend
+
+Open a new terminal, `cd` into the repo directory and run:
+
+`npm run server`
+
+You need to leave this window open in order for the server to keep running.
+
 ## Available Scripts
 
 In the project directory, you can run:
