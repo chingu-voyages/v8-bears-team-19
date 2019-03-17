@@ -1,0 +1,45 @@
+.feed {
+  margin: 5em auto;
+  max-width: 66%;
+  .feed__heading {
+    padding-left: 15px;
+    line-height: 1.45;
+    color: palevioletred;
+    padding-bottom: 10px;
+  }
+  .feed__container {
+    max-width: 820px;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+
+  .feed__itemContainer {
+    background: cyan;
+    list-style: none;
+    padding-left: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    &:nth-of-type(odd) {
+      background: lightgrey;
+    }
+
+    .feed__item {
+      color: $black;
+      display: flex;
+      justify-content: space-between;
+      .feedItem__title {
+        flex-basis: 50%;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .feedItem__author {
+        flex-basis: 20%;
+        text-transform: lowercase;
+      }
+      .feedItem__likes {
+        flex-basis: 12%;
+        font-style: italic;
+      }
+    }
+  }
+}
