@@ -1,10 +1,12 @@
-import { DUMMY_ACTION } from '../../constants'
+import { combineReducers } from 'redux';
+import { DUMMY_ACTION } from '../../constants';
 
-const initialState = {}
+// Reducers
+import recipe from './recipe';
 
-// The reducer needs to be a function and accept
-// 'state' and 'action' as arguments
-export default (state = initialState, action) => {
+const initialState = {};
+
+const dummy = (state = initialState, action) => {
     switch(action.type) {
         case(DUMMY_ACTION):
             console.log('WOW! Nothing happened!')
@@ -12,4 +14,9 @@ export default (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
+
+export default combineReducers({
+    dummy,
+    recipe
+});
