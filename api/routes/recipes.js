@@ -29,4 +29,11 @@ router.put('/:recipeId', function(req, res) {
   res.json(req.params.recipeId);
 });
 
+// Delete a specific recipe endpoint
+router.delete('/:recipeId', function(req, res) {
+  // TODO: Change below code with database code
+  // Delete a recipe
+  res.json({message: 'recipe deleted!', _id: req.params.recipeId});
+});
+
 module.exports = router;
