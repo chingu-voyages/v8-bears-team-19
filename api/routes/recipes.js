@@ -18,7 +18,14 @@ router.post('/', function(req, res) {
 // Get a specific recipe endpoint
 router.get('/:recipeId', function(req, res) {
   // TODO: Change below code with database code
-  // Add new recipe
+  // Get new recipe
+  res.json(req.params.recipeId);
+});
+
+// Update a specific recipe endpoint
+router.put('/:recipeId', function(req, res) {
+  // TODO: Change below code with database code
+  // Update a recipe
   res.json(req.params.recipeId);
 });
 
