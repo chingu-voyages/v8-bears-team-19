@@ -25,5 +25,5 @@ app.get('/', function (req, res) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/api/recipes', recipeRoutes);
+app.use('/api/recipe', recipeRoutes);
 app.listen(process.env.PORT || 8080);
