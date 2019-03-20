@@ -40,8 +40,11 @@ router.get('/:recipeId', function(req, res) {
   const _id = req.params.recipeId;
 
   Recipe.findById(_id, function (err, recipe) {
-    if (err) res.json({ error: text.recipe_not_found(_id) })
-    res.json(req.params.recipeId);
+    if (err) {
+      res.json({ error: text.recipe_not_found(_id) });
+    } else {
+      res.json(req.params.recipeId);
+    }
   });
 });
 
@@ -54,8 +57,11 @@ router.put('/:recipeId', function(req, res) {
   // TODO validate id
 
   Recipe.findById(_id, function (err, recipe) {
-    if (err) res.json({ error: text.recipe_not_found(_id) })
-    res.json(req.params.recipeId);
+    if (err) {
+      res.json({ error: text.recipe_not_found(_id) });
+    } else {
+      res.json(req.params.recipeId);
+    }
   });
 });
 
