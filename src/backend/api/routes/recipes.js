@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
-var localeManager = require("locale-manager");
  
 const Recipe = require('../../models/recipe');
 
-// For developing purposes
+// Using 'en-US' for developing purposes
 const locale = "en-US";
-const text = localeManager[locale];
+const text = require('../../locales/'+locale+".js");
 
 // Get all recipes endpoint
 router.get('/', function(req, res) {
