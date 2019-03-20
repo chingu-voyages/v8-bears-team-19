@@ -63,7 +63,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "server": "nodemon src/back/server.js",
+    "server": "nodemon src/backend/server.js",
     "deploy-backend": "git subtree push --prefix src/backend heroku master"
   },
   "eslintConfig": {
