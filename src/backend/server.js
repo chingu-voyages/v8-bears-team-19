@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const recipeRoutes = require('./api/routes/recipes');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect(process.env.MONGODB_URI);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
