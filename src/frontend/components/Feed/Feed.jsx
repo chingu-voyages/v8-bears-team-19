@@ -9,7 +9,7 @@ const dummyFeed = [
 ];
 
 const Feed = props => {
-  const title = "Hot Recipes!"
+  const title = "Hot Recipes!";
 
   return (
     <div className="feed">
@@ -27,7 +27,7 @@ const Feed = props => {
                   <span className="feedItem__likes">forks: {x.likes}</span>
                 </div> 
               </li>
-            )
+            );
           })}
         </ul>
       </div>
