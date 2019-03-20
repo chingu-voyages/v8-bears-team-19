@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 
 // Root reducer that combines all the smaller reducers
-import rootReducer from './reducers'
+import rootReducer from './reducers';
 
 const store = createStore(
     rootReducer,

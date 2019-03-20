@@ -6,7 +6,8 @@ export const DUMMY_ACTION = 'DUMMY_ACTION';
 // Recipes
 export const GET_RECIPE = 'GET_RECIPE';
 export const GET_RECIPES = 'GET_RECIPES';
-export const ADD_RECIPE = 'ADD_RECIPE';
+export const ADD_RECIPE_SUCCESS = 'ADD_RECIPE_SUCCESS';
+export const ADD_RECIPE_FAILED = 'ADD_RECIPE_FAILED';
 export const REMOVE_RECIPE = 'REMOVE_RECIPE';
 export const MODIFY_RECIPE = 'MODIFY_RECIPE';
 

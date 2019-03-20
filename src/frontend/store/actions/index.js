@@ -6,4 +6,4 @@ export const callAPI = () => (dispatch) => {
     dispatch({
         type: DUMMY_ACTION
     });
-}
+};
