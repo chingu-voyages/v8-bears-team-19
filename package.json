@@ -64,7 +64,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "server": "nodemon src/back/server.js",
-    "deploy-backend": "git subtree push --prefix backend heroku master"
+    "deploy-backend": "git subtree push --prefix src/backend heroku master"
   },
   "eslintConfig": {
     "extends": "react-app"
