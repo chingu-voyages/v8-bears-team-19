@@ -1,13 +1,18 @@
 const express = require('express');
 const router = express.Router();
-
+var localeManager = require("locale-manager");
+ 
 const Recipe = require('../../models/recipe');
+
+// For developing purposes
+const locale = "en-US";
+const text = localeManager[locale];
 
 // Get all recipes endpoint
 router.get('/', function(req, res) {
   // TODO: Change below code with database code
   // Get all recipes
-  res.json('Hello from recipes route');
+  res.json(text.recipe_hello);
 });
 
 // Post a new recipe endpoint
@@ -31,9 +36,14 @@ router.post('/add', function(req, res) {
 
 // Get a specific recipe endpoint
 router.get('/:recipeId', function(req, res) {
-  // TODO: Change below code with database code
   // Get new recipe
-  res.json(req.params.recipeId);
+
+  const _id = req.params.recipeId;
+
+  Recipe.findById(_id, function (err, recipe) {
+    if (err) res.json({ error: text.recipe_not_found(_id) })
+    res.json(req.params.recipeId);
+  });
 });
 
 
@@ -45,10 +55,9 @@ router.put('/:recipeId', function(req, res) {
   // TODO validate id
 
   Recipe.findById(_id, function (err, recipe) {
-    if (err) res.json({ error: RECIPE_NOT_FOUND })
+    if (err) res.json({ error: text.recipe_not_found(_id) })
+    res.json(req.params.recipeId);
   });
-
-  res.json(req.params.recipeId);
 });
 
 // Delete a specific recipe endpoint

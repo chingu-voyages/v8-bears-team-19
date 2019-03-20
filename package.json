@@ -76,6 +76,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "locale-manager": "^1.2.6",
     "nodemon": "^1.18.10",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
