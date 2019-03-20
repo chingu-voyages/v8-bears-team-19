@@ -22,15 +22,16 @@ router.post('/add', function(req, res) {
 
   // some validations..
 
-  const newRec = new Recipe({
-    title, author, description
-  });
+  const newRec = new Recipe({ title, author, description });
 
   newRec.save(err => {
-    if (err) console.error(err);
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('should return { ...req.body, linkId: "" }');
+      res.json(req.body);
+    }
   });
-
-  res.json(req.body);
 });
 
 // Get a specific recipe endpoint

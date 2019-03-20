@@ -1,6 +1,7 @@
 const express = require('express');
+const cors = require('cors');
 
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const recipeRoutes = require('./api/routes/recipes');
@@ -10,8 +11,16 @@ mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('is working!')
+  console.log('is working!');
 });
+
+app.use(cors());
+
+/*
+app.use(cors({
+  origin: 'http://yourapp.com'
+}));
+*/
 
 app.use(express.static(path.join(__dirname, 'build')));
 

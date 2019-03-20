@@ -9,7 +9,7 @@ const initialState = {};
 const dummy = (state = initialState, action) => {
     switch(action.type) {
         case(DUMMY_ACTION):
-            console.log('WOW! Nothing happened!')
+            console.log('WOW! Nothing happened!');
             return { ...state, dummy: true };
         default:
             return state;
