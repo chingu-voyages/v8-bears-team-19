@@ -67,6 +67,9 @@
     "deploy-backend": "git subtree push --prefix src/backend heroku master"
   },
   "eslintConfig": {
+    "rules": {
+      "semi": "error"
+    },
     "extends": "react-app"
   },
   "browserslist": [
