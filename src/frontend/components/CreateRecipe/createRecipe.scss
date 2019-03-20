@@ -1,0 +1,30 @@
+.createRecipe__form {
+  margin: 5em auto;
+  max-width: 66%;
+  //text-align: center;
+
+  div {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "labels fields";
+
+    label {
+      grid-area: labels;
+      font-weight: bold;
+    }
+  
+    input, textarea {
+      padding: 5px;
+      grid-area: fields;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+      max-height: 160px;
+    }
+
+  }
+
+}
